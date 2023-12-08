@@ -1,1 +1,2 @@
-# react-with-tailwind
+# React JS Beginners course
+

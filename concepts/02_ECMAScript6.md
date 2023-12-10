@@ -12,7 +12,7 @@
   7. Ternary Operator
   8. Spread Operator
 
-#### Classes
+## Classes
 
 - ES6 introduced classes.
 - A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a `constructor()` method.
@@ -20,7 +20,7 @@
 
 
 
-## Method in Classes
+#### Method in Classes
 - You can add your own methods in a class:
 
 #### Class Inheritance
@@ -56,4 +56,54 @@ console.log(studentOne.Studycourse());
 
 - The super() method refers to the parent class.
 - By calling the super() method in the constructor method, we call the parent's constructor method and get access to the parent's properties and methods.
+
+## React ES6 Arrow Functions
+
+- Arrow functions allow us to write shorter function syntax:
+
+- Before (NOT an arrow function)
+
+```jsx
+
+hello = function() {
+  return "Hello World!";
+}
+
+```
+
+- After (A simple arrow function.)
+
+```jsx
+
+hello = () => {
+  return "Hello World!";
+}
+
+```
+
+- It gets shorter! If the function has only `one statement`, and the statement returns a value, you can remove the brackets and the return keyword:
+- Arrow Functions Return Value by Default:
+- This works only if the function has only one statement.
+
+```jsx
+
+hello = () => "Hello World!";
+
+```
+
+- If you have `parameters`, you pass them inside the parentheses:
+
+```jsx
+
+hello = (val) => "Hello " + val;
+
+```
+- In fact, if you have only one parameter, you can skip the parentheses as well:
+
+```jsx
+
+hello = val => "Hello " + val;
+
+```
+
 

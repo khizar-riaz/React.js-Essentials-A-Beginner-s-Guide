@@ -247,7 +247,7 @@ function myVehicle(vehicle) {
 
 ```
 
-**Here is the new way of using an object inside a function:**
+**Here is the `new` way of using an object inside a function:**
 
 ```jsx
 
@@ -270,8 +270,69 @@ function myVehicle({type, color, brand, model}) {
 - Notice that the object properties do not have to be declared in a specific order.
 - We can even destructure deeply nested objects by referencing the `nested object` then using a colon and curly braces to again destructure the items needed from the nested object: `(Example: examples/02_ECMAScript_6.js line 46)`
 
+## React ES6 Spread Operator
 
+- The JavaScript spread operator `...` allows us to quickly copy all or part of an existing array or object into another array or object.
 
+```jsx
+
+const numbersOne = [1, 2, 3];
+const numbersTwo = [4, 5, 6];
+const numbersCombined = [...numbersOne, ...numbersTwo];
+
+console.log (numbersCombined);
+//Print [ 1, 2, 3, 4, 5, 6 ]
+
+```
+
+- The spread operator is often used in combination with `destructuring`.
+
+```jsx
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const [one, two, ...rest] = numbers;
+
+console.log (one);  //Print 1
+console.log (two);  //Print 2
+console.log (rest); //Print [ 3, 4, 5, 6 ]
+
+```
+
+- We can use the spread operator with objects too:
+
+```jsx
+
+const myVehicle = {
+  brand: 'Ford',
+  model: 'Mustang',
+  color: 'red'
+}
+
+const updateMyVehicle = {
+  type: 'car',
+  year: 2021,
+  color: 'yellow'
+}
+
+const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
+
+console.log(myUpdatedVehicle);
+
+/*
+Output on console:
+{
+  brand: 'Ford',
+          model: 'Mustang',
+        color: 'yellow',
+        type: 'car',
+        year: 2021
+}
+*/
+
+```
+
+- Notice the properties that did not match were combined, but the property that did match, `color`, was overwritten by the last object that was passed, updateMyVehicle. The resulting color is now `yellow`.
 
 
 

@@ -106,4 +106,57 @@ hello = val => "Hello " + val;
 
 ```
 
+## React ES6 Variables
 
+- Before ES6 there was only one way of defining your variables: with the `var` keyword. If you did not define them, they would be assigned to the global object. Unless you were in `strict mode`, then you would get an error if your variables were undefined.
+
+- Now, with ES6, there are three ways of defining your variables: `var`, `let`, and `const`.
+
+#### var
+
+  1. If you use var `outside of a function`, it belongs to the `global scope`.  
+  2. If you use var `inside of a function`, it belongs to that function.
+  3. If you use var `inside of a block`, i.e. a for loop, the variable is still available outside of that block.
+
+- var has a `function scope`, not a block scope.
+
+```jsx
+
+var number = 5.6;
+
+```
+
+#### let
+
+- let is the `block scoped` version of var, and is limited to the block (or expression) where it is defined.
+- If you use let inside of a block, i.e. a for loop, the variable is only available inside of that loop.
+
+- let has a `block scope`.
+
+```jsx
+
+let number = 2.3;
+
+```
+
+#### const
+
+- const is a variable that once it has been created, its value can never change.
+- The keyword `const` is a bit misleading. It does not define a `constant value`. It defines a `constant reference` to a value.
+
+- Because of this you can NOT:
+  1. Reassign a constant value
+  2. Reassign a constant array
+  3. Reassign a constant object
+  
+- But you CAN:
+  1. Change the elements of constant array
+  2. Change the properties of constant object
+
+- const has a `block scope`.
+
+```jsx
+
+const number = 131;
+
+```

@@ -135,3 +135,35 @@ const myElement = <h1 className="myclass">Hello World</h1>;
 
 ```
 
+#### Conditions - if statements
+
+- React supports `if` statements, but not inside `JSX`.
+- To be able to use conditional statements in JSX, you should put the if statements outside of the JSX, or you could use a `ternary expression` instead:
+  **Option 1:**
+- Write if statements outside of the JSX code:
+
+```jsx
+
+const x = 5;
+let text = "Goodbye";
+if (x < 10) {
+  text = "Hello";
+}
+
+const myElement = <h1>{text}</h1>;
+
+```
+
+**Option 2:**
+- Use ternary expressions instead:
+
+```jsx
+
+const x = 5;
+
+const myElement = <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>;
+
+```
+
+- for jsx code sample check example: `(Example: examples/04_react_JSX.js line 1)`
+
